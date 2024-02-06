@@ -1,0 +1,55 @@
+.search-item-section {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 89px;
+  color: white;
+  z-index: 101;
+  background: black;
+  transform: translateY(100%);
+  transition: all 0.8s;
+  padding: 20px 0;
+  overflow: auto;
+
+  &.search-item-section-visible {
+    transform: translateY(0);
+  }
+
+  .song-cards-wrapper {
+    gap: 30px;
+    padding-bottom: 100px;
+  }
+
+  .song-card {
+    max-width: 300px;
+  }
+
+  .shadow {
+    transition: all 0.5s;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  img {
+    transition: all 0.5s;
+  }
+  .img-wrapper:hover {
+    img {
+      opacity: 0.3;
+    }
+    .shadow {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .search-item-section{
+    top: 135px;
+  }
+}

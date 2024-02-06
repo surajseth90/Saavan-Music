@@ -1,0 +1,40 @@
+.album-container {
+  gap: 40px;
+  padding-bottom: 50px;
+  .album-details-wrapper {
+    max-width: 500px;
+  }
+
+  td,
+  th {
+    padding: 15px 10px;
+  }
+
+  .music-play-btn {
+    color: white;
+  }
+
+  .song-row {
+    transition: all 0.3s;
+    border-radius: 10px;
+    &:hover {
+      background-color: beige;
+      color: black !important;
+
+      .music-play-btn {
+        color: black;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .album-container {
+    flex-direction: column;
+    align-items: center;
+    td,
+    th {
+      padding: 15px 5px;
+    }
+  }
+}
